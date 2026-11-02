@@ -1,14 +1,13 @@
-## Koorosh Roohi
+PhD candidate in Biomedical Engineering at the University of Toronto and Faculty Affiliate Researcher at the Vector Institute. I work on image generation with diffusion transformers, mostly training-free methods for high-resolution synthesis and efficient inference. My PhD thesis is on infection risk estimation in hospitals, using mmWave radar, RGB-D cameras and wearable sensors to recognize caregiver activities.
 
-PhD candidate at the University of Toronto and Faculty Affiliate Researcher at the Vector Institute. I work on high-resolution image generation with diffusion transformers, mostly training-free methods that get a model to generate well past the resolution it was trained at.
-
-[Website](https://kooroshrh.github.io/) · [Hugging Face](https://huggingface.co/kooroshrh) · [ORCID](https://orcid.org/0009-0009-9690-8489) · [LinkedIn](https://www.linkedin.com/in/koorosh-roohi-a21a21182) · [X](https://x.com/kooroshroohi) · [Email](mailto:korosh.roohi9731@gmail.com)
-
-**Recent papers**
-
-- **[AReA](https://github.com/KooroshRH/AReA)**: adaptive receptive-field attention, up to 3.2× faster at high resolution <kbd>preprint</kbd>
-- **[PhotoQuilt](https://github.com/KooroshRH/PhotoQuilt)**: arbitrary-resolution photomosaics via tiled denoising <kbd>WACV 2027</kbd>
-- **[SEGA](https://github.com/rajabi2001/sega)**: spectral-energy guided attention for resolution extrapolation <kbd>NeurIPS 2026</kbd>
+<p>
+<a href="https://kooroshrh.github.io/"><img alt="Website" src="https://img.shields.io/badge/Website-21262D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRTZFREYzIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNMiAxMmgyME0xMiAyYTE1LjMgMTUuMyAwIDAgMSA0IDEwIDE1LjMgMTUuMyAwIDAgMS00IDEwIDE1LjMgMTUuMyAwIDAgMS00LTEwIDE1LjMgMTUuMyAwIDAgMSA0LTEweiIvPjwvc3ZnPg%3D%3D"></a>
+<a href="https://scholar.google.com/citations?user=bNl5VsQAAAAJ&amp;hl=en"><img alt="Google Scholar" src="https://img.shields.io/badge/Google_Scholar-21262D?style=for-the-badge&logo=googlescholar&logoColor=4285F4"></a>
+<a href="https://huggingface.co/kooroshrh"><img alt="Hugging Face" src="https://img.shields.io/badge/Hugging_Face-21262D?style=for-the-badge&logo=huggingface&logoColor=FFD21E"></a>
+<a href="https://www.linkedin.com/in/koorosh-roohi-a21a21182/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-21262D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iMyIgZmlsbD0iIzBBNjZDMiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03LjEgMjAuNUgzLjZWOWgzLjV6TTUuMyA3LjRhMi4xIDIuMSAwIDEgMSAwLTQuMSAyLjEgMi4xIDAgMCAxIDAgNC4xek0yMC40IDIwLjVoLTMuNXYtNS42YzAtMS4zIDAtMy0xLjktM3MtMi4xIDEuNC0yLjEgMi45djUuN0g5LjRWOWgzLjR2MS42Yy41LS45IDEuNi0xLjkgMy40LTEuOSAzLjYgMCA0LjMgMi40IDQuMyA1LjV6Ii8%2BPC9zdmc%2B"></a>
+<a href="https://x.com/kooroshroohi"><img alt="X" src="https://img.shields.io/badge/X-21262D?style=for-the-badge&logo=x&logoColor=white"></a>
+<a href="mailto:koorosh.roohi@mail.utoronto.ca"><img alt="Email" src="https://img.shields.io/badge/Email-21262D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRTZFREYzIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHJlY3QgeD0iMiIgeT0iNCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE2IiByeD0iMiIvPjxwYXRoIGQ9Im0yMiA3LTEwIDZMMiA3Ii8%2BPC9zdmc%2B"></a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/strip-dark.svg">
@@ -23,7 +22,7 @@ PhD candidate at the University of Toronto and Faculty Affiliate Researcher at t
   <img alt="GitHub stats" src="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/stats-light.svg" width="49%">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/top-langs-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/top-langs-light.svg">
-  <img alt="Most used languages" src="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/top-langs-light.svg" width="49%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-light.svg">
+  <img alt="Contributions and weekly streak" src="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-light.svg" width="49%">
 </picture>

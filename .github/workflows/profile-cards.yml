@@ -1,5 +1,5 @@
-# Rebuilds the two activity cards in README.md and publishes them to the
-# `output` branch, so `main` stays free of daily bot commits.
+# Rebuilds the two activity cards in README.md (stats and weekly streak) and
+# publishes them to the `output` branch, so `main` stays free of daily bot commits.
 #
 # Works with the default GITHUB_TOKEN (public activity only). To include
 # private contributions, add a classic personal access token with the
@@ -23,12 +23,14 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Borderless, untitled cards on a transparent background, so they sit in the page.
-  COMMON: hide_title=true&hide_border=true&bg_color=00000000&card_width=460
-  DARK: text_color=c9d1d9&icon_color=8b949e&title_color=c9d1d9
-  LIGHT: text_color=1f2328&icon_color=59636e&title_color=1f2328
-  STATS: show_icons=true&include_all_commits=true&hide_rank=true&text_bold=false&line_height=24
-  LANGS: layout=compact&langs_count=8&hide=html,css,scss,tex&size_weight=0.5&count_weight=0.5
+  # Borderless cards on a transparent background, so they sit in the page.
+  # Both are 460x171 so they line up side by side.
+  STATS: show_icons=true&include_all_commits=true&hide_rank=true&hide_title=true&text_bold=false&line_height=26&hide_border=true&bg_color=00000000&card_width=460
+  STATS_DARK: text_color=c9d1d9&icon_color=8b949e&title_color=c9d1d9
+  STATS_LIGHT: text_color=1f2328&icon_color=59636e&title_color=1f2328
+  STREAK: mode=weekly&hide_border=true&background=00000000&card_width=460&card_height=171
+  STREAK_DARK: stroke=30363D&ring=2EA043&fire=3FB950&currStreakNum=E6EDF3&sideNums=E6EDF3&currStreakLabel=C9D1D9&sideLabels=C9D1D9&dates=8B949E&excludeDaysLabel=8B949E
+  STREAK_LIGHT: stroke=D0D7DE&ring=1A7F37&fire=2DA44E&currStreakNum=1F2328&sideNums=1F2328&currStreakLabel=1F2328&sideLabels=1F2328&dates=59636E&excludeDaysLabel=59636E
 
 jobs:
   cards:
@@ -48,7 +50,7 @@ jobs:
         continue-on-error: true
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.COMMON }}&${{ env.DARK }}
+          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.STATS_DARK }}
           path: dist/stats-dark.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
@@ -58,30 +60,30 @@ jobs:
         continue-on-error: true
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.COMMON }}&${{ env.LIGHT }}
+          options: username=${{ github.repository_owner }}&${{ env.STATS }}&${{ env.STATS_LIGHT }}
           path: dist/stats-light.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Top languages (dark)
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: Weekly streak (dark)
+        uses: DenverCoder1/github-readme-streak-stats@v1
         continue-on-error: true
         with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&${{ env.LANGS }}&${{ env.COMMON }}&${{ env.DARK }}
-          path: dist/top-langs-dark.svg
+          options: user=${{ github.repository_owner }}&${{ env.STREAK }}&${{ env.STREAK_DARK }}
+          path: dist/streak-dark.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
-          fail_on_error: true
 
-      - name: Top languages (light)
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: Weekly streak (light)
+        uses: DenverCoder1/github-readme-streak-stats@v1
         continue-on-error: true
         with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&${{ env.LANGS }}&${{ env.COMMON }}&${{ env.LIGHT }}
-          path: dist/top-langs-light.svg
+          options: user=${{ github.repository_owner }}&${{ env.STREAK }}&${{ env.STREAK_LIGHT }}
+          path: dist/streak-light.svg
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
-          fail_on_error: true
+
+      # Cards that are no longer shown in README.md.
+      - name: Drop retired cards
+        run: rm -f dist/top-langs-*.svg dist/snake-*.svg
 
       - name: List cards
         run: ls -la dist

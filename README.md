@@ -14,15 +14,3 @@ PhD candidate in Biomedical Engineering at the University of Toronto and Faculty
   <source media="(prefers-color-scheme: light)" srcset="assets/strip-light.svg">
   <img alt="" src="assets/strip-light.svg" width="100%">
 </picture>
-
-<!-- Rebuilt daily by .github/workflows/profile-cards.yml and published to the `output` branch. -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/stats-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/stats-light.svg">
-  <img alt="GitHub stats" src="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/stats-light.svg" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-light.svg">
-  <img alt="Contributions and weekly streak" src="https://raw.githubusercontent.com/KooroshRH/KooroshRH/output/streak-light.svg" width="49%">
-</picture>
